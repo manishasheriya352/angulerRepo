@@ -1,0 +1,283 @@
+<div class="main-register style-page-design  module-registration">
+    <form class="input-control inherit-alert" #heroForm="ngForm">
+        <div class="row">
+            <div class="col-6">
+                <label for="Firstname">Firstname:</label>
+                <input class="form-control" (change)="onFirstNameChange()" type="text" id="Firstname" placeholder="Enter Firstname" pattern="[a-zA-Z ]*" required minlength="4" maxlength="25" appForbiddenName="bob"
+                [(ngModel)]="hero.name" name="firstName" #name="ngModel">
+
+                <div *ngIf="name.invalid && (name.dirty || name.touched)"
+                class="alert alert-danger">
+  
+              <div *ngIf="name.errors.required">
+                Name is required.
+              </div>
+              <div *ngIf="name.errors.pattern">
+                Only alphabat can be put.
+              </div>
+              <div *ngIf="name.errors.minlength &&  (!name.errors.pattern)">
+                Name must be at least 4 characters long.
+              </div>
+              <div *ngIf="name.errors.maxlength">
+                Name cannot be more than 25 characters long.
+              </div>
+         </div>
+            </div>
+            
+            <div class="col-6">
+                <label for="lastname">lastname:</label>
+                <input class="form-control" (change)="onlastNameChange()" type="text" id="lastname" placeholder="Enter Lastname" pattern="[a-zA-Z ]*" required minlength="4" maxlength="25" appForbiddenName="bob"
+                [(ngModel)]="hero.lastName" name="lastName" #lastName="ngModel">
+                
+                <div *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)"
+                class="alert alert-danger">
+  
+              <div *ngIf="lastName.errors.required">
+                lastName is required.
+              </div>
+              <div *ngIf="lastName.errors.pattern">
+                Only alphabat can be put.
+              </div>
+              <div *ngIf="lastName.errors.minlength && (!lastName.errors.pattern)">
+                lastName must be at least 4 characters long.
+              </div>
+              <div *ngIf="lastName.errors.maxlength">
+                lastName cannot be more than 25 characters long.
+              </div>
+         </div>
+            </div>
+        </div>
+        <div class="row">
+         
+         <div class="col-6">
+                <label for="email">Email id:</label>
+                <input class="form-control" type="email" id="email" placeholder="Enter Email Id" (change)="onEmailChange()"  required minlength="4" maxlength="50" appForbiddenName="bob"
+                [(ngModel)]="hero.email" name="email" #email="ngModel">
+
+                <div *ngIf="email.invalid && (email.dirty || email.touched)"
+                class="alert alert-danger">
+  
+              <div *ngIf="email.errors.required">
+                Email id is required.
+              </div>
+              
+              <div *ngIf="email.errors.minlength">
+                Email id  must be at least 4 characters long.
+              </div>
+              <div *ngIf="email.errors.maxlength">
+                Email id  cannot be more than 50 characters long.
+              </div>
+         </div>
+
+            </div>
+            <div class="col-6">
+                <label for="password">Password:</label>
+                <input class="form-control" type="password" id="password" placeholder="Enter Password" (change)="onPasswordChange()" required minlength="4" maxlength="20" appForbiddenName="bob"
+                [(ngModel)]="hero.password" name="password" #password="ngModel">
+                
+                <div *ngIf="password.invalid && (password.dirty || password.touched)"
+                class="alert alert-danger">
+  
+              <div *ngIf="password.errors.required">
+                password is required.
+              </div>
+              
+              <div *ngIf="password.errors.minlength">
+                password  must be at least 4 characters long.
+              </div>
+              <div *ngIf="password.errors.maxlength">
+                password  cannot be more than 20 characters long.
+              </div>
+
+            </div>
+
+        </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="checkbox padding-contant">
+                    <label><input class="margin-top-box" type="checkbox" name="remember" (change)="onCheakboxChange()"  required  [(ngModel)]="hero.cheakbox" name="cheakbox" #cheakbox="ngModel"> Select cheakbox if you are Admin</label>
+                   
+                    <div *ngIf="cheakbox.invalid && (cheakbox.dirty || cheakbox.touched)"
+                    class="alert alert-danger">
+                    <div *ngIf="cheakbox.errors.required">
+                        cheakbox is required.
+                      </div>
+                    </div>
+                </div>
+            </div>
+          
+                <div class="col-6">
+                <label for="Enroll">Enrollment No:</label>
+                <input class="form-control" (change)="onenroLlNumberChange()" type="text" id="Enroll" placeholder="Enter Enrollment No" required minlength="4" maxlength="25" appForbiddenName="bob"
+                [(ngModel)]="hero.enrollNumber" name="enroLlNumber" #enroLlNumber="ngModel">
+
+                <div *ngIf="enroLlNumber.invalid && (enroLlNumber.dirty || enroLlNumber.touched)"
+                class="alert alert-danger">
+  
+              <div *ngIf="enroLlNumber.errors.required">
+                Enrollment number is required.
+              </div>
+              <div *ngIf="enroLlNumber.errors.minlength">
+                Enrollment number must be at least 4 characters long.
+              </div>
+              <div *ngIf="enroLlNumber.errors.maxlength">
+                Enrollment number cannot be more than 25 characters long.
+              </div>
+         </div>
+            </div>
+
+        </div>
+
+
+        <div class="row">
+            <div class="col-6">
+
+                <label for="year">Year of graduation:</label>
+                <select class="form-control" name="years" id=year (change)="onYearChange()"  required    
+                [(ngModel)]="hero.year" name="year" #year="ngModel">
+
+                <div *ngIf="year.invalid && (year.dirty || year.touched)"
+                class="alert alert-danger">
+                
+                <div *ngIf="year.errors.required">
+                    year is required.
+                  </div> 
+                </div>
+                     <option value="">Please Select</option>
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                    <option value="2019">2019</option>
+                    <option value="2018">2018</option>
+                    <option value="2017">2017</option>
+                    <option value="2016">2016</option>
+                    <option value="2015">2015</option>
+                    <option value="2014">2014</option>
+                    <option value="2013">2013</option>
+                    <option value="2012">2012</option>
+                    <option value="2011">2011</option>
+                    <option value="2010">2010</option>
+                    <option value="2009">2009</option>
+                    <option value="2008">2008</option>
+                    <option value="2007">2007</option>
+                    <option value="2006">2006</option>
+                    <option value="2005">2005</option>
+                </select>
+
+            </div>
+
+            <div class="col-6">
+
+                <label for="course">Course</label>
+                <select name="courses" class="form-control" id=course>
+
+                    <option value="">Please Select</option>
+                    <option value="M.Sc.(CS)">M.Sc.(CS)</option>
+                    <option value="BBA">BBA</option>
+                    <option value="BCA">BCA</option>
+                    <option value="B.Sc.(CS)">B.Sc.(CS)</option>
+                    <option value="B.Com.(Hons)">B.Com.(Hons)</option>
+                    <option value="B.Com.(CA)">B.Com.(CA)</option>
+                    <option value="B.Com.(Tax)">B.Com.(Tax)</option>
+                    <option value="B.Com.(Plain)">B.Com.(Plain)</option>
+                    <option value="B.Com.(Foreign)">B.Com.(Foreign)</option>
+                    <option value="B.Com.(Biotechnology)">B.Com.(Biotechnology)</option>
+                    <option value="B.A">B.A</option>
+                </select>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+
+
+                <label for="Occupation">Occupation:</label>
+                <select class="form-control" name="Occupations" id=Occupation (change)="onOccupationChange()" 
+                [(ngModel)]="hero.Occupation"  #Occupation="ngModel">
+                    <option value="">Please Select</option>
+                    <option value="Business">Business</option>
+                    <option value="Self-Employed">Self-Employed</option>
+                    <option value="Service">Service</option>
+                    <option value="Other">Other</option>
+
+             
+                </select>
+
+            </div>
+
+
+            <div class="col-6">
+                <label for="Designation">Designation:</label>
+                <input class="form-control" type="text" id="Designation" placeholder="Enter Designation" (change)="onDesignationChange()" maxlength="25" 
+                [(ngModel)]="hero.designation" name="Designation" #Designation="ngModel">
+                <div *ngIf="Designation.invalid && (Designation.dirty || Designation.touched)"
+                class="alert alert-danger">
+                <div *ngIf="Designation.errors.maxlength">
+                    Designation cannot be more than 25 characters long.
+                  </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <label for="OrganizationName">Name of Organization:</label>
+                <input class="form-control" type="text" id="OrganizationName" placeholder="Organization Name" (change)="onOrganizationNameChange()" maxlength="50" 
+                [(ngModel)]="hero.OrganizationName" name="OrganizationName" #OrganizationName="ngModel">
+
+                <div *ngIf="OrganizationName.invalid && (OrganizationName.dirty || OrganizationName.touched)"
+                class="alert alert-danger">
+                <div *ngIf="OrganizationName.errors.maxlength">
+                    OrganizationName cannot be more than 30 characters long.
+                  </div>
+                  
+                </div>
+            </div>
+            <div class="col-6">
+                <label for="Mobile-Number">Mobile Number:</label>
+                <input class="form-control" type="tel" id="Mobile-Number" placeholder="Enter Mobile Number" pattern="[0-9]{10}" (change)="onMbNoChange()" maxlength="10" 
+                [(ngModel)]="hero.mobileNo" name="mobileNo" #mobileNo="ngModel">
+                <div *ngIf="mobileNo.invalid && (mobileNo.dirty || mobileNo.touched)"
+                class="alert alert-danger">
+                <div *ngIf="mobileNo.errors.maxlength">
+                  mobileNo cannot be more than 10 characters long.
+                  </div>
+                  <div *ngIf="mobileNo.errors.pattern">
+                    mobileNo should be a numeric number.
+                    </div>
+                </div>
+            </div>
+            
+            </div>
+      
+        <div class="row">
+             <div class="col-6">
+                <label for="Current-Location">Current Location:</label>
+                <input class="form-control" type="text" id="Current-Location" placeholder="Enter Location" (change)="onLocationChange()" maxlength="40" 
+                [(ngModel)]="hero.Location" name="Location" #Location="ngModel">
+
+                <div *ngIf="Location.invalid && (Location.dirty || Location.touched)"
+                class="alert alert-danger">
+                <div *ngIf="Location.errors.maxlength">
+                  Location Address cannot be more than 40 characters long.
+                  </div>
+            </div>
+            <!-- <div class="col-6 set-button">
+                <input class="btn btn-primary button-style" type="submit" value="Register">
+            </div> -->
+             </div>
+           
+        </div>
+        <div class="row">
+            <div class="col-12 set-button">
+                <button class="btn btn-primary button-style"  (click)="onSave()" type="submit">Register</button>
+            </div>  
+        </div>
+
+
+    </form>
+
+</div>

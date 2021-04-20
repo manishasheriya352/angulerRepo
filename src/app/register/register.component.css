@@ -1,0 +1,57 @@
+.module-registration{
+    color: black ;
+   /*  margin-left: 132px;  */
+    padding-top: 65px;
+    padding-bottom: 75px;
+}
+.module-registration .input-minimize{
+    width: 50%;
+}
+.margin-top-box{
+    margin-top: 25px;
+}
+.input-control .form-control{
+    width: 64%;
+}
+.float-left-button{
+    float: right;
+}
+.set-button{
+    margin-top: 30px;
+    text-align: center;
+}
+.button-style{
+    margin-right: 109px;
+    width: 14%;
+    font-size: 20px;
+    padding-top: 0px;
+    font-weight: bold;
+    background-color: brown;
+    border: 1px solid;
+    
+}
+.set-button .btn-primary:active{
+background-color:brown;
+
+}
+.disabled-btn{
+    background-color: lightgray;
+}
+.inherit-alert .alert-danger{
+    display: inline-block;
+    padding: 0;
+    border: none;
+    background-color: #f0f0f0;
+    color: red;
+}
+.padding-contant{
+    margin-right: 82px;
+}
+.style-page-design{
+  
+    margin-top: 55px;
+    margin-bottom: 55px;
+    background-color: #f0f0f0;
+    border-top: 5px solid darkblue;
+    padding-left: 137px;
+}

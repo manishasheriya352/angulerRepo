@@ -1,0 +1,16 @@
+
+<div id="mySidenav" class="sidenav" #news>
+    
+  <!--   <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a> -->
+    <ul>
+        <li>manu</li>
+        <li>nishu</li>
+        <li>jayant</li>
+        <li>dheeru</li>
+    </ul>
+   
+  </div>
+  <div id="div-aline" class="container-fluid spanSize">
+    <span *ngIf="!isNavOpen" (click)="openNav()">&#9776;</span>
+    <span  *ngIf="isNavOpen" (click)="closeNav()">&#9776;</span>
+  </div>

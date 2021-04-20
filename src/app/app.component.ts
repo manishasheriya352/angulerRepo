@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular8firstapp';
+  tshit : string = 'repido';
+  price : number = 54;
 }

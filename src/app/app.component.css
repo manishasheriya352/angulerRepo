@@ -1,0 +1,19 @@
+.main-header{
+    height: 65px;
+    background-color:navy;
+}
+/* .body-section{
+
+   
+    background-color: aliceblue;
+} */
+.main-footer{
+    height: 65px;
+    background-color:lightblue; 
+   
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
+
+

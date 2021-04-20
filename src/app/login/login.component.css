@@ -1,0 +1,66 @@
+.main-login-content{
+  margin-top :20px;
+ text-align: center;
+ background-color: #f0f0f0 ;   
+ padding-bottom: 25px;
+ padding-left: 34px;
+ padding-right: 34px;
+ border-top: 5px solid darkblue;
+}
+.flex-container{
+    display :flex;
+}
+.login-form .margin-84{
+    margin-right: 84px;
+}
+.login-form .margin-54{
+    margin-right: 54px;
+}
+.aline-end{
+    text-align: end;
+}
+.login-form{
+    padding-top: 50px;
+}
+.main-login-content .alert-danger{
+    color: red;
+    background-color: #f0f0f0;
+    border: none;
+} 
+.main-login-content .alert{
+    padding: 0px;
+    
+}
+.text-aline{
+    text-align: left;
+}
+.aline-end .btn-primary{
+    background-color: darkred;
+    border: none;
+    border-radius: 5px;
+}
+.aline-end .btn-primary:active{
+  background-color: navy;
+}
+/* .aline-end a{
+    padding-left: 45px;
+} */
+.aline-end .disabled-btn{
+    background-color: gray;
+}
+.padding-top{
+    padding-top: 25px;
+
+}
+.margin-left{
+    margin-left: 60px;
+}
+.alert.alert-danger.text-aline {
+    margin-bottom: 8px;
+}
+.style-page{
+  
+    margin-top: 55px;
+    margin-bottom: 55px;
+    
+}
