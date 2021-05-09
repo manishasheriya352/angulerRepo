@@ -2,7 +2,7 @@
     height: 80%;
     width:0;
     position: fixed;
-    z-index: -1;
+    /* z-index: -1; */
     top: 65px;
     left: 0;
     background-color: #f0f0f0;
@@ -14,7 +14,49 @@
     margin-left: -136px;
  }
 
-#div-aline{
+.div-aline{
     margin-left: -136px;
     transition: 0.5s;
+}
+.span-design{
+  /*   margin-left: 425px; */
+    font-size: 27px;
+    color: white;
+    /* border: 2px solid navy; */
+    border-radius: 5px;
+    /* padding-left: 5px;
+    padding-right: 5px; */
+    position: fixed;
+    transition: 0.5s ease-out;
+    background-color: brown;
+}
+.content-design{
+    margin-top: 65px;
+}
+.button-close{
+    position: absolute;
+    right: 0;
+}
+.list-style{
+    list-style-type: none;
+}
+.newsLogo{
+    font-size: 25px;
+    text-align: center;
+    color: navy;
+    background-color: aliceblue;
+    /* border-bottom: 5px solid gainsboro; */
+    box-shadow: 5px 10px 8px #888888;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+.list-decoration{
+    margin-top: 30px;
+}
+.list-decoration .list-style li{
+background-color: white;
+margin-bottom: 20px;
+padding: 10px;
+margin-right: 27px;
+border-left: 4px solid navy;
 }

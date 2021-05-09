@@ -1,1 +1,59 @@
+<div class="main-post-div">
+    <!--  <div class="design-post-div">
+        <h2>Your Feeds</h2>
+    </div> -->
+    <div class="myPostCheackbox form-check">
+        <p class="informativePera">My Post</p> 
+        <input type="checkbox" class="form-check-input showPost" (change)="showMyPost($event)" value="">
+    </div>
+    <div class="heading-discription-div" *ngFor="let postObj of postArray; let i=index"  [@inOutAnimation]="'in'">
+        <div class="heading-design">
+            <h5>{{postObj.heading}}</h5>
+            <button type="button" class="btn deleteButton" (click)="onDeletePost(postObj)"><fa-icon [icon]="deleteICON" class="delete-icon"></fa-icon></button>
+        </div>
+        <div class="alumni-Name-date-div">
+            <p class="post-senderName"> {{postObj.name}}</p>
+            
+            <span class="postActualDate">{{postObj.date}}</span>
+        </div>
+        <div class="design-description-div">
+            <p>{{postObj.description}}</p>
 
+        </div>
+        <div class="btn-div">
+            <button type="button" class="btn button-design" (click)="replyOnPost()">reply </button>
+        </div>
+        <div class="pop-up-footer">
+            <div class="pop-up-box">
+                <input type="text" class="form-control" placeholder="Add a comment....." #inputComment name="repliText">
+
+
+            </div>
+            <div class="submit-div">
+                <button type="button" class="btn btn-primary" (click)="onAddComment(inputComment.value,postObj)">Submit</button>
+            </div>
+
+        </div>
+        <div class="div-width" (click)=onShowReplies()> comments<fa-icon [icon]="faAngleDoubleDown" class="dounArrao"></fa-icon></div>
+        <span class="show-line"><hr class="line-decoration"></span>
+       
+        <div class="showAllReplies"  *ngIf="showReplies">
+           <div *ngFor="let eachPersonReplie of postObj.replies">
+            <div class="eachRepiles">
+                <div class="replay-heading">
+                <div class="list-decorate">
+                    {{eachPersonReplie.commentedBy}}
+                </div>
+                   <span class="timeDecoration"> {{eachPersonReplie.commentTime}}</span>
+                </div>
+               
+                 <div> {{eachPersonReplie.commentValue}}</div>
+            </div>
+            
+        </div>
+
+        </div>
+        
+    </div>
+    
+</div>

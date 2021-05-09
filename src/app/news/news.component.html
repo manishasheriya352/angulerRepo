@@ -2,15 +2,32 @@
 <div id="mySidenav" class="sidenav" #news>
     
   <!--   <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a> -->
-    <ul>
-        <li>manu</li>
-        <li>nishu</li>
+  <div>
+  <button id="span-id" class="span-design"  (click)="toggleNav()">&#9776;</button>
+    </div>
+   
+  <div class="content-design">
+    <div class="newsLogo">
+        Latest News
+    </div>
+   <div class="list-decoration">
+    <ul class=" list-style">
+        <li>Link Copied
+
+
+            Home›Education›Difference Between Compiler And Interpreter
+            Difference between Compiler and Interpreter
+            BI INDIA BUREAUMAY 27, 2019, 18:10 IST
+        </li>
+        <li>nshu</li>
         <li>jayant</li>
         <li>dheeru</li>
     </ul>
-   
+</div>
+</div>
+   <!--  <div id="div-aline" class="container-fluid spanSize">
+        <span *ngIf="!isNavOpen" (click)="openNav()">&#9776;</span>
+        <span  *ngIf="isNavOpen" (click)="closeNav()">&#9776;</span>
+      </div> -->
   </div>
-  <div id="div-aline" class="container-fluid spanSize">
-    <span *ngIf="!isNavOpen" (click)="openNav()">&#9776;</span>
-    <span  *ngIf="isNavOpen" (click)="closeNav()">&#9776;</span>
-  </div>
+ 

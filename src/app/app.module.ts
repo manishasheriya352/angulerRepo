@@ -1,3 +1,4 @@
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -13,7 +14,11 @@ import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { NewsComponent } from './news/news.component';
 import { PostComponent } from './post/post.component';
-
+import { MainPostComponent } from './main-post/main-post.component';
+import { FilesComponent } from './files/files.component';
+import { MyPostComponent } from './my-post/my-post.component';
+import { FontAwesomeModule} from '@fortawesome/angular-fontawesome';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -29,14 +34,24 @@ import { PostComponent } from './post/post.component';
     HomeComponent,
     NewsComponent,
     PostComponent,
+    MainPostComponent,
+    FilesComponent,
+    MyPostComponent,
 
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
-  ],
+    AppRoutingModule,
+    FontAwesomeModule,
+    BrowserAnimationsModule,
+   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+/*   constructor(private library: FaIconLibrary) {
+    library.addIcons(faAngleDoubleDown);
+   }
+ */
+}

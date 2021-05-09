@@ -11,16 +11,31 @@ export class NewsComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  @ViewChild('news') news : ElementRef;
+  /* @ViewChild('news') news : ElementRef; */
   closeNav(){
     this.isNavOpen = false;
     document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("div-aline").style.marginLeft= "-136px";
+   // document.getElementById("span-id-2").style.marginLeft= "0";
   }
   openNav(){
     this.isNavOpen = true;
-    document.getElementById("mySidenav").style.width = "400px";
-  document.getElementById("div-aline").style.marginLeft = "225px";
+    document.getElementById("mySidenav").style.width = "35%";
+ /*  document.getElementsByClassName("span-design")[0].style.marginLeft = "0"; */
+/*       document.getElementById("span-id").style.marginLeft = "425px"; */
+ 
+  }
+  toggleNav(){
+  
+   
+    if(this.isNavOpen){
+      this.isNavOpen = false;
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("span-id").style.marginLeft = "0";
+    }else{
+      document.getElementById("span-id").style.marginLeft = "420px";
+      this.isNavOpen = true;
+      document.getElementById("mySidenav").style.width = "35%";
+    }
   }
 
 }

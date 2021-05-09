@@ -1,0 +1,207 @@
+.design-post-div{
+/* text-align: center; */
+/* background-color: #e7e7e7; */
+}
+.heading-design{
+   /*  border-bottom: 1px solid gray;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px; */
+    background-color: #f6f9fb;
+    border-top: 4px solid #ffffff;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.design-description-div{
+    height: 90px;
+    background-color: white;
+}
+.main-post-div{
+   
+   
+    padding-top: 25px;
+    background-color: #fdfdfd;
+}
+.heading-discription-div{
+    
+    margin-bottom: 50px;
+    margin-left: 60px;
+    margin-right: 60px;
+    box-shadow: 1px 1px 9px 1px #cecccc;
+    border-radius: 29px;
+    padding-bottom: 15px;
+}
+.heading-design h5{
+    padding-left: 20px; 
+    margin-bottom: 0;
+    padding-bottom: 7px;
+    padding-top: 7px;
+    display: inline-block;
+    width: 95%;
+}
+.design-description-div p{
+    padding-left: 20px;
+}
+
+.btn-div .btn:focus{
+    box-shadow: none;
+}
+.btn-div{
+    background-color: white;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    display: inline-block;
+    padding-left: 10px;
+}
+.pop-up-box{
+    
+   
+    width: 80%;
+    display: inline-block;
+   
+}
+.pop-up-box .form-control{
+  /*   margin-bottom: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 11px; */
+    height: calc(1.5em + 0.75rem + -6px);
+    box-shadow: 1px 1px 2px 1px lightgrey;
+    border-radius: 35px;
+    background-color: #fbfbff;
+}
+.design-post-div h2{
+padding-left: 30px;
+    padding-top: 12px;
+    padding-bottom: 5px;
+}
+.pop-up-footer{
+    display: inline;
+ 
+}
+.submit-div{
+    display: inline-block;
+    margin-left: 15px;
+}
+
+button.btn.btn-primary {
+    padding-top: 0;
+    padding-bottom: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+button.btn.button-design:hover {
+    color: red;
+}
+.showAllReplies{
+    border: 1px solid;
+    margin-left: 71px;
+    margin-right: 129px;
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    box-shadow: 3px 1px 2px 1px lightgrey;
+    padding: 1.375rem 1.75rem;
+    background-color: #fbfbff;
+    margin-top: 14px;
+}
+.pop-up-box .form-control:focus{
+    box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
+}
+.eachRepiles{
+    margin-top: 0;
+    margin-bottom: 1rem;
+    background-color: #ececec;
+    border-radius: 4px 35px 4px;
+    padding-left: 22px;
+    padding-right: 4px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+ul.eachRepiles {
+    list-style-type: none;
+}
+.list-decorate{
+    display: inline-block;
+    width: 88%;
+    color: darkgoldenrod;
+    font-weight: 600;
+}
+.timeDecoration{
+    display: inline-block;
+    font-size: 12px;
+    color: darkgray;
+    
+}
+.div-width{
+    display: inline-block;
+    margin-left: 22px;
+}
+.div-width .dounArrao{
+    margin-left: 5px;
+    color: gray;
+
+}
+hr.line-decoration{
+    width: 74%;
+    display: inline-block;
+    margin-bottom: 6px;
+    margin-left: 9px;
+}
+.div-width .dounArrao:focus{
+    color: #79d1f5!important;
+
+}
+.div-width .dounArrao:hover{
+    color: darkblue;
+}
+p.post-senderName {
+    display: inline-block;
+    width: 89%;
+    font-size: 17px;
+    font-weight: 600;
+    margin-left: 20px;
+    color: darkgoldenrod;
+}
+.postActualDate{
+    font-size: 12px;
+    color: darkgray;
+}
+.alumni-Name-date-div{
+    padding-top: 7px;
+}
+.delete-icon{
+    color: gray;
+}
+
+.deleteButton:focus{
+  /*   color: #0d77e8; */
+    box-shadow: none;
+}
+.delete-icon:hover{
+    color: cornflowerblue;
+}
+.deleteButton{
+   animation-delay: 10s;
+}
+.myPostCheackbox{   
+text-align: end;
+margin-right: 73px;
+margin-bottom: 8px;
+height: 20px;
+display: inline-block;
+    margin-left: 930px;
+    /* border: 1px solid #e4dcdc; */
+    padding-bottom: 26px;
+    border-radius: 9px;
+    background-color: #f6f9fb;
+    box-shadow: 1px 1px 1px 1px gainsboro;
+    border-top: 3px solid white;
+
+}
+.informativePera{
+    display: inline-block;
+/* display: none; */
+margin-right: 29px;
+margin-bottom: 0;
+
+}
