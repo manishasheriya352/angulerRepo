@@ -3,57 +3,111 @@
         <h2>Your Feeds</h2>
     </div> -->
     <div class="myPostCheackbox form-check">
-        <p class="informativePera">My Post</p> 
-        <input type="checkbox" class="form-check-input showPost" (change)="showMyPost($event)" value="">
+        <div class="add-post" (mouseenter)="onAddPost()" (mouseleave)="onLeavePost()">
+            <button type="button" class="btn" (click)="open(mymodal)">
+                <fa-icon [icon]=" plusSign" class="plus-icon"></fa-icon>
+            </button>
+            <span class="compose-span" #composeref>Compose</span>
+        </div>
+        <div class="show-post-div">
+            <p class="informativePera">My Post</p>
+            <input type="checkbox" class="form-check-input showPost" (change)="showMyPost($event)" value="">
+        </div>
     </div>
-    <div class="heading-discription-div" *ngFor="let postObj of postArray; let i=index"  [@inOutAnimation]="'in'">
+    <div class="heading-discription-div" *ngFor="let postObj of postArray; let i=index" [@inOutAnimation]="'in'">
         <div class="heading-design">
             <h5>{{postObj.heading}}</h5>
-            <button type="button" class="btn deleteButton" (click)="onDeletePost(postObj)"><fa-icon [icon]="deleteICON" class="delete-icon"></fa-icon></button>
+            <button type="button" class="btn deleteButton" (click)="onDeletePost(postObj)">
+                <fa-icon [icon]="deleteICON" class="delete-icon"></fa-icon>
+            </button>
         </div>
         <div class="alumni-Name-date-div">
             <p class="post-senderName"> {{postObj.name}}</p>
-            
+
             <span class="postActualDate">{{postObj.date}}</span>
         </div>
         <div class="design-description-div">
             <p>{{postObj.description}}</p>
 
-        </div>
-        <div class="btn-div">
-            <button type="button" class="btn button-design" (click)="replyOnPost()">reply </button>
-        </div>
-        <div class="pop-up-footer">
-            <div class="pop-up-box">
-                <input type="text" class="form-control" placeholder="Add a comment....." #inputComment name="repliText">
 
+
+        </div>
+        <div class="mainProfileDiv">
+            <div class="userProfile-div">
+                <span class="userIcon">
+                    <fa-icon [icon]="userProfile"></fa-icon>
+                </span>
+            </div>
+            <div class="pop-up-footer">
+                <div class="pop-up-box">
+                    <input type="text" class="form-control" placeholder="Add a comment....." #inputComment
+                        name="repliText">
+
+
+                </div>
+                <div class="submit-div">
+                    <button type="button" class="btn btn-primary"
+                        (click)="onAddComment(inputComment.value,postObj)">Submit</button>
+                </div>
 
             </div>
-            <div class="submit-div">
-                <button type="button" class="btn btn-primary" (click)="onAddComment(inputComment.value,postObj)">Submit</button>
+        </div>
+        <div class="div-width" (click)=onShowReplies()> comments<fa-icon [icon]="faAngleDoubleDown" class="dounArrao">
+            </fa-icon>
+        </div>
+        <span class="show-line">
+            <hr class="line-decoration"></span>
+
+        <div class="showAllReplies" *ngIf="showReplies">
+            <div *ngFor="let eachPersonReplie of postObj.replies">
+                <div class="eachRepiles">
+                    <div class="replay-heading">
+                        <div class="list-decorate">
+                            <span class="   font-size-profile">
+                                <fa-icon [icon]="userProfile"></fa-icon>
+                            </span>
+                            {{eachPersonReplie.commentedBy}}
+                        </div>
+                        <span class="timeDecoration "> {{eachPersonReplie.commentTime}}</span>
+                    </div>
+
+                    <div> {{eachPersonReplie.commentValue}}</div>
+                </div>
+
             </div>
 
         </div>
-        <div class="div-width" (click)=onShowReplies()> comments<fa-icon [icon]="faAngleDoubleDown" class="dounArrao"></fa-icon></div>
-        <span class="show-line"><hr class="line-decoration"></span>
-       
-        <div class="showAllReplies"  *ngIf="showReplies">
-           <div *ngFor="let eachPersonReplie of postObj.replies">
-            <div class="eachRepiles">
-                <div class="replay-heading">
-                <div class="list-decorate">
-                    {{eachPersonReplie.commentedBy}}
-                </div>
-                   <span class="timeDecoration"> {{eachPersonReplie.commentTime}}</span>
-                </div>
-               
-                 <div> {{eachPersonReplie.commentValue}}</div>
+
+    </div>
+
+
+</div>
+
+
+<ng-template #mymodal let-modal postBotstrapModal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Create New Post</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">×</span>
+        </button>
+    </div>
+    <div class=" postBotstrapModal modal-body">
+        <form #heroForm="ngForm">
+            <div class="form-group">
+                <label for="post">Subject</label>
+                <input type="text" class="form-control" id="post" aria-describedby="emailHelp" name="subjectName"
+                    placeholder="Enter Subject of Post" ngModel>
+            </div>
+         
+            <div class="form-group">
+                <label for="description">Description</label>
+                <input type="text" class="form-control" id="description" aria-describedby="emailHelp" name="description"
+                    placeholder="Enter Description About post" ngModel>
             </div>
             
+        </form>
         </div>
-
+        <div class="modal-footer">
+            <button type="button" class="btn btn-outline-dark btn-post-submit" (click)="modal.close(heroForm.value)">Submit</button>
         </div>
-        
-    </div>
-    
-</div>
+</ng-template>

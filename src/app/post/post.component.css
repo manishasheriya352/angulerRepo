@@ -19,7 +19,7 @@
 .main-post-div{
    
    
-    padding-top: 25px;
+    padding-top: 35px;
     background-color: #fdfdfd;
 }
 .heading-discription-div{
@@ -77,8 +77,10 @@ padding-left: 30px;
 }
 .pop-up-footer{
     display: inline;
- 
+    position: relative;
+    top: -4px;
 }
+
 .submit-div{
     display: inline-block;
     margin-left: 15px;
@@ -95,8 +97,8 @@ button.btn.button-design:hover {
 }
 .showAllReplies{
     border: 1px solid;
-    margin-left: 71px;
-    margin-right: 129px;
+    margin-left: 96px;
+    margin-right: 96px;
     border-radius: 8px;
     border: 1px solid #ced4da;
     box-shadow: 3px 1px 2px 1px lightgrey;
@@ -184,24 +186,115 @@ p.post-senderName {
    animation-delay: 10s;
 }
 .myPostCheackbox{   
-text-align: end;
-margin-right: 73px;
-margin-bottom: 8px;
-height: 20px;
-display: inline-block;
-    margin-left: 930px;
-    /* border: 1px solid #e4dcdc; */
-    padding-bottom: 26px;
-    border-radius: 9px;
-    background-color: #f6f9fb;
-    box-shadow: 1px 1px 1px 1px gainsboro;
-    border-top: 3px solid white;
-
+padding-bottom:15px;
 }
 .informativePera{
     display: inline-block;
 /* display: none; */
-margin-right: 29px;
+
 margin-bottom: 0;
 
+}
+.userIcon{
+    font-size: 29px;
+    border: 1px solid;
+    padding-left: 9px;
+    padding-right: 9px;
+    border-radius: 27px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-right: 5px;
+    color: white;
+    background-color: #b9b9b9;
+    border: 2px solid white;
+}
+.userProfile-div{
+    display: inline-block;
+}
+.mainProfileDiv{
+   
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 15px;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 9px 1px #e2dada;
+    border-radius: 12px;
+}
+.font-size-profile{
+    border: 2px solid white;
+    padding: 3px 6px 3px 6px;
+    border-radius: 16px;
+    color: white;
+    background-color: darkgrey;
+
+}
+.replay-heading{
+    margin-bottom: 6px;
+}
+.myPostCheackbox .form-check-input{
+    position: static;
+    margin-top: 0;
+    margin-left: 0;
+}
+.show-post-div{
+    display:inline-block; 
+    position: absolute;
+    right: 76px;
+    border-radius: 9px;
+    background-color: #f6f9fb;
+    box-shadow: 1px 1px 1px 1px gainsboro;
+    border-top: 3px solid white;
+    /* height: 20px; */
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    bottom: 6px;
+}
+.add-post{
+    display: inline-block;
+   
+    border-radius: 38px;
+    background-color: #f9f9f9;
+    box-shadow: 2px 2px 2px 2px darkgrey;
+    padding: 5px;
+    transition: display 1s ease-out;
+    border: 2px solid white;
+}
+
+.plus-icon{
+    font-size: 25px; 
+    margin-right: 9px;
+    margin-left: 9px;
+    color: darkred;
+}
+.compose-span{
+    position: absolute;
+    margin-top: 8px;
+    display: none;
+}
+.add-post:hover{
+    width: 12%;
+    display: inline-block;
+}
+.add-post .btn{
+    padding: 0;
+} 
+.add-post .btn:focus{
+    box-shadow: none;
+ 
+}
+.postBotstrapModal.modal-body {
+    padding: 32px;
+}
+.btn-post-submit{
+    color: #fff;
+    background-color: brown;
+    border-color: #343a40;
+}
+.modal-header{
+    background-color: darkred;
+    color: white;
 }

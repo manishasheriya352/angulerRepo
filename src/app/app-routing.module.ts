@@ -1,3 +1,4 @@
+import { MainNewsComponent } from './main-news/main-news.component';
 import { MyPostComponent } from './my-post/my-post.component';
 import { FilesComponent } from './files/files.component';
 import { PostComponent } from './post/post.component';
@@ -11,6 +12,7 @@ const routes: Routes = [
   {path:'login', component:LoginComponent},
   {path:'', component:LoginComponent, pathMatch : "full" },
   {path:'register', component:RegisterComponent},
+  {path:'mainNews', component:MainNewsComponent},
   {path:'home' , component:HomeComponent,children:[
     {path:'post',outlet:'topPostBar',component:PostComponent},
     {path:'',outlet:'topPostBar',component:PostComponent},

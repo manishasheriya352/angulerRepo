@@ -19,7 +19,8 @@ import { FilesComponent } from './files/files.component';
 import { MyPostComponent } from './my-post/my-post.component';
 import { FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { MainNewsComponent } from './main-news/main-news.component';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MainPostComponent,
     FilesComponent,
     MyPostComponent,
+    MainNewsComponent,
 
   ],
   imports: [
@@ -45,6 +47,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     FontAwesomeModule,
     BrowserAnimationsModule,
+    NgbModule,
    ],
   providers: [],
   bootstrap: [AppComponent]
